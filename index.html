@@ -22,22 +22,32 @@
             age: 22
         }
 
+        //DOM Event
+        handleClick(e) {
+            console.log(e);
+        }
+
+        // Mouse Over
+        handleMouseOver(e) {
+            console.log(e);
+            console.log(e.target, e.pageX);
+        }
+
+        handleCopy(e) {
+            console.log('my name is vish and this line is copy');
+        }
+
         render() {
             return (
                 <div>
                     <h1>hi vishal</h1>
                     <p>{Math.random() * 10}</p>
-                    {
-                        //    single line comment
-                    }
-                    {
-                        /*
-                            multiline comment
-                            name and age using state
-                        */
-                    }
                     <p>My name is {this.state.name} and age is {this.state.age}</p>
                     <p> age is {this.state.age + 1}</p>
+                    <button onClick={this.handleClick}>click</button>
+
+                    <button onMouseOver={this.handleMouseOver}>Mouse Over</button>
+                    <p onCopy={this.handleCopy}>copy text</p>
 
                 </div>
             )
