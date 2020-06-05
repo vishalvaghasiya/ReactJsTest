@@ -16,17 +16,35 @@
 <div id="app"></div>
 <script type="text/babel">
     class App extends React.Component {
+        // State name is state
+        state = {
+            name: 'vishal',
+            age: 22
+        }
 
         render() {
             return (
                 <div>
                     <h1>hi vishal</h1>
                     <p>{Math.random() * 10}</p>
+                    {
+                        //    single line comment
+                    }
+                    {
+                        /*
+                            multiline comment
+                            name and age using state
+                        */
+                    }
+                    <p>My name is {this.state.name} and age is {this.state.age}</p>
+                    <p> age is {this.state.age + 1}</p>
+
                 </div>
             )
         }
 
     }
+
     ReactDOM.render(<App/>, document.getElementById('app'));
 </script>
 </body>
