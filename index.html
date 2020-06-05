@@ -23,17 +23,19 @@
         }
 
         //DOM Event
-        handleClick(e) {
+        handleClick = (e) => {
             console.log(e);
+            //here state not access without array function so, now convert
+            console.log(this.state);
         }
 
         // Mouse Over
-        handleMouseOver(e) {
+        handleMouseOver = (e) => {
             console.log(e);
             console.log(e.target, e.pageX);
         }
 
-        handleCopy(e) {
+        handleCopy = (e) => {
             console.log('my name is vish and this line is copy');
         }
 
